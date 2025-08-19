@@ -1,0 +1,22 @@
+.descr{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-bottom: 100px;
+    &__title{
+        @include title;
+    }
+
+    &__info{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    &__img{
+        border-radius: var(--border-radius);
+        width: 70%;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- CSS -->
+    <title>ZLAB</title>
+  </head>
+
+  <body>
+    <!-- START HEADER -->
+    <header class="header">
+      <div class="container header__container">
+        <a href="#" class="header__logo">
+          <img src="./img/logo.PNG" alt="ЛОГОТИП" class="header__logo-img" />
+          <!-- <span>Совершенствуем детали с любовью</span> -->
+        </a>
+
+        <nav class="header__nav hidden-mobile">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">О нас</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">Наши услуги</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">Наши цены</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">Наши работы</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">Наши сертификаты</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">Отзывы</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__contact hidden-mobile">
+          <div class="header__contact-list">
+            <a class="header__contact-phone" href="tel:79818460505"
+              >+7 (981) 846-05-05</a
+            >
+            <a href="#" class="header__contact-whatsapp"
+              ><span>whataspp</span></a
+            >
+            <a href="#" class="header__contact-telegram"
+              ><span>telegram</span></a
+            >
+          </div>
+        </div>
+		<!-- burger -->
+		<button
+          class="button__burger-menu burger-button visible-mobile"
+          type="button"
+          onclick="mobileOverlay.showModal()"
+        >
+      </div>
+    </header>
+    <!-- END HEADER -->
+
+    <!-- START MAIN -->
+    <main class="main">
+      <!-- HERO -->
+      <section class="hero">
+        <!-- Видео на фоне -->
+        <video class="hero__video" autoplay muted loop playsinline>
+          <!-- Добавьте свои видеофайлы в разных форматах для кроссбраузерности -->
+          <source src="./video/backvideo.mp4" type="video/mp4" />
+          <source src="video/background.webm" type="video/webm" />
+          Ваш браузер не поддерживает видео.
+        </video>
+
+        <!-- Затемнение поверх видео -->
+        <div class="hero__overlay"></div>
+
+        <div class="hero__container container">
+          <!-- Контент поверх видео -->
+          <div class="hero__content">
+            <h1 class="hero__title">Студия красоты <span>Z.Lab</span></h1>
+            <p class="hero__subtitle">
+              Профессиональный уход за бровями и ресницами. Подчеркиваем
+              природную красоту с душой и мастерством
+            </p>
+
+            <div class="hero__buttons">
+              <button class="hero__button button">
+                Записаться на процедуру
+              </button>
+              <button class="hero__button button-second">Узнать больше</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- HERO -->
+
+      <!-- DESCR -->
+      <section class="descr">
+		<div class="descr__container container">
+			<h2 class="descr__title">
+				Z.Lab — студия красоты
+			</h2>
+
+			<div class="descr__info">
+				<div class="descr__text">
+					<p>
+						Студия красоты Z.Lab была основана более 4х лет назад и с каждым годом мы совершенствуем свои навыки, чтобы дарить Вам уверенность в каждом дне. С момента открытия мы стремительно развиваемся, предлагая клиентам высококачественные и безопасные услуги в сфере красоты.
+					</p>
+
+					<p>
+						Наши мастера имеют большой опыт в наращивании ресниц, а ведущий мастер перманентного макияжа Елена, является дипломированным специалистом в области архитектуры бровей, перманентного макияжа и эпидермальных техник, с опытом более 8 лет, имеет международные сертификаты, является выпускником международной академии Lash&Brow и дипломированным специалистом по мануальным техникам перманента. Также она — действующий член профессиональной ассоциации мастеров ПМ-системы ГРАТАЖ.
+					</p>
+				</div>
+
+				<img class="descr__img" src="./img/descr/descr.jpg" alt="изображение zlab">
+			</div>
+
+			<!-- <div class="descr__advantages">
+				<h3 class="descr__advantages-title">
+					Наши преимущества
+				</h3>
+
+				<div class="descr__advantages-list">
+
+				</div>
+			</div> -->
+		</div>
+      </section>
+      <!-- DESCR -->
+    </main>
+    <!-- END MAIN -->
+
+    <!-- START FOOTER -->
+    <!-- END FOOTER -->
+
+    <!-- START BURGER -->
+    <dialog class="mobile-overlay visible-mobile" id="mobileOverlay">
+      <form class="mobile-overlay__close-button-wrapper" method="dialog">
+        <button class="mobile-overlay__close-button cross-button" type="submit">
+          <span class="visually-hidden">Close navigation menu</span>
+        </button>
+      </form>
+      <div class="mobile-overlay__body">
+        <ul class="mobile-overlay__list dropdown__mobile" id="dropdown__mobile">
+          <li class="mobile-overlay__item">
+            <a class="mobile-overlay__link" href="#">О нас</a>
+          </li>
+          <li class="mobile-overlay__item">
+            <a class="mobile-overlay__link" href="#">Наши услуги</a>
+          </li>
+          <li class="mobile-overlay__item">
+            <a class="mobile-overlay__link" href="#">Наши цены</a>
+          </li>
+          <li class="mobile-overlay__item">
+            <a class="mobile-overlay__link" href="#">Наши работы</a>
+          </li>
+          <li class="mobile-overlay__item">
+            <a class="mobile-overlay__link" href="#">Наши сертификаты</a>
+          </li>
+          <li class="mobile-overlay__item">
+            <a class="mobile-overlay__link" href="#">Отзывы</a>
+          </li>
+		  
+          <li class="mobile-overlay__item">
+            <a class="mobile-overlay__link header__contact-phone" href="#">+7 (981) 846-05-05</a>
+          </li>
+		  
+          <li class="mobile-overlay__item">
+            <a class="mobile-overlay__link header__contact-whatsapp" href="#">whataspp</a>
+          </li>
+          <li class="mobile-overlay__item">
+            <a class="mobile-overlay__link header__contact-telegram" href="#">telegram</a>
+          </li>
+        </ul>
+      </div>
+    </dialog>
+    <!-- END BURGER -->
+
+    <!-- START MODAL -->
+    <!-- END MODAL -->
+
+    <!-- JS -->
+    <script src="./script/main.js"></script>
+    <!-- JS -->
+  </body>
+</html>
