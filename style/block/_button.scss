@@ -32,6 +32,15 @@
 			background-color: var(--color-dark);
 		}
 	}
+
+	@media (max-width: 768px) {
+		font-size: 1rem;
+		height: var(--button-height-small);
+	}
+
+	@media (max-width: 480px) {
+		font-size: 1rem;
+	}
 }
 // BUTTON
 
@@ -68,9 +77,17 @@
 			background-color: var(--color-dark);
 		}
 	}
+
+	@media (max-width: 768px) {
+		font-size: 1rem;
+		height: var(--button-height-small);
+	}
+
+	@media (max-width: 480px) {
+		font-size: 1rem;
+	}
 }
 // BUTTON-SECOND
-
 
 // BUTTON-SMALL
 .button-small {
@@ -79,15 +96,16 @@
 	height: var(--button-height-small);
 	padding-inline: 35px;
 	font-size: 16px;
-	color: var(--color-accent);
-	background-color: var(--color-accent-light);
+	color: var(--color-light);
+	background-color: var(--color-accent);
 	border: var(--border);
-	border-radius: var(--border-radius);
+	border-radius: var(--border-radius-small);
 	border-color: var(--color-accent);
 
 	@include hover {
-		color: var(--color-light);
-		background-color: var(--color-accent);
+		// color: var(--color-light);
+		background-color: var(--color-accent-dark);
+		border-color: var(--color-accent-dark);
 	}
 
 	&--transparent {
@@ -106,7 +124,6 @@
 	}
 }
 // BUTTON-SMALL
-
 
 // BURGER BUTTON
 .burger-button {
@@ -146,7 +163,6 @@
 
 	@include hover {
 		background-color: var(--color-accent);
-		
 	}
 
 	&::before,
@@ -159,7 +175,6 @@
 		height: 2px;
 		background-color: var(--color-dark);
 		border-radius: 5px;
-		
 	}
 
 	&::before {

@@ -88,5 +88,11 @@
                 background: var(--color-blue-dark);
             }
         }
+
+        &-whatsapp > span, &-telegram > span{
+            @media (max-width: 1200px) {
+                display: none;
+            }
+        }
     }
 }
