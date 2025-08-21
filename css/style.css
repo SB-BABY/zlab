@@ -571,41 +571,11 @@ h4,
   rotate: -45deg;
 }
 
-/* Стили для Slick Slider */
 .slick-list {
   padding-bottom: 15px;
-  overflow: visible;
-}
-@media (max-width: 768px) {
-  .slick-list {
-    padding-bottom: 10px;
-  }
-}
-.slick-track {
-  display: flex;
-  gap: 20px;
-  align-items: stretch;
-}
-@media (max-width: 768px) {
-  .slick-track {
-    gap: 15px;
-  }
-}
-@media (max-width: 480px) {
-  .slick-track {
-    gap: 10px;
-  }
-}
-.slick-slide {
-  height: auto;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
-}
-.slick-slide.slick-active {
-  opacity: 1;
 }
 
-/* Стрелки */
+/* Стили для стрелок */
 .slick-arrow {
   position: absolute;
   top: 95%;
@@ -636,48 +606,12 @@ h4,
   border: 2px solid white;
   border-width: 2px 2px 0 0;
 }
-@media (max-width: 1024px) {
-  .slick-arrow {
-    width: 35px;
-    height: 35px;
-  }
-  .slick-arrow:before {
-    width: 12px;
-    height: 12px;
-  }
-}
-@media (max-width: 768px) {
-  .slick-arrow {
-    width: 30px;
-    height: 30px;
-    top: 100%;
-  }
-  .slick-arrow:before {
-    width: 10px;
-    height: 10px;
-  }
-}
 
 .slick-prev {
   left: 38%;
 }
 .slick-prev:before {
   transform: translate(-50%, -50%) rotate(-135deg);
-}
-@media (max-width: 1024px) {
-  .slick-prev {
-    left: 35%;
-  }
-}
-@media (max-width: 768px) {
-  .slick-prev {
-    left: 30%;
-  }
-}
-@media (max-width: 480px) {
-  .slick-prev {
-    left: 25%;
-  }
 }
 
 .slick-next {
@@ -686,23 +620,13 @@ h4,
 .slick-next:before {
   transform: translate(-50%, -50%) rotate(45deg);
 }
-@media (max-width: 1024px) {
-  .slick-next {
-    right: 35%;
-  }
-}
-@media (max-width: 768px) {
-  .slick-next {
-    right: 30%;
-  }
-}
-@media (max-width: 480px) {
-  .slick-next {
-    right: 25%;
-  }
+
+/* Стили для dots */
+.slick-track {
+  display: flex;
+  gap: 20px;
 }
 
-/* Точки */
 .slick-dots {
   position: relative;
   bottom: 0;
@@ -712,12 +636,6 @@ h4,
   gap: 10px;
   list-style: none;
   padding: 0;
-}
-@media (max-width: 768px) {
-  .slick-dots {
-    margin-top: 25px;
-    gap: 8px;
-  }
 }
 
 .slick-dots li {
@@ -735,23 +653,21 @@ h4,
   font-size: 0;
   transition: all 0.3s ease;
 }
-@media (max-width: 768px) {
-  .slick-dots li button {
-    width: 10px;
-    height: 10px;
-  }
-}
-.slick-dots li button:hover {
-  background: var(--color-accent);
-  opacity: 0.8;
-}
 
 .slick-dots li.slick-active button {
   background: var(--color-accent);
   transform: scale(1.2);
 }
 
-.slick-dots li button:before,
+.slick-dots li button:hover {
+  background: var(--color-accent);
+  opacity: 0.8;
+}
+
+.slick-dots li button:before {
+  color: transparent;
+}
+
 .slick-dots li.slick-active button:before {
   color: transparent;
 }

@@ -1,43 +1,9 @@
-
-/* Стили для Slick Slider */
-.slick {
-    &-list {
-        padding-bottom: 15px;
-        overflow: visible;
-        
-        @media (max-width: 768px) {
-            padding-bottom: 10px;
-        }
-    }
-    
-    &-track {
-        display: flex;
-        gap: 20px;
-        align-items: stretch;
-        
-        @media (max-width: 768px) {
-            gap: 15px;
-        }
-        
-        @media (max-width: 480px) {
-            gap: 10px;
-        }
-    }
-    
-    &-slide {
-        height: auto;
-        
-        // Плавное появление слайдов
-        opacity: 0.7;
-        transition: opacity 0.3s ease;
-        
-        &.slick-active {
-            opacity: 1;
-        }
-    }
+.slick-list{
+    // margin-bottom: 50px;
+    padding-bottom: 15px;
 }
 
-/* Стрелки */
+/* Стили для стрелок */
 .slick-arrow {
     position: absolute;
     top: 95%;
@@ -54,7 +20,7 @@
     transition: all 0.3s ease;
     
     &:hover {
-        background: rgba(0, 0, 0, 0.9);
+        background: rgba(0,0,0,0.9);
         transform: translateY(-50%) scale(1.1);
     }
     
@@ -69,27 +35,6 @@
         border: 2px solid white;
         border-width: 2px 2px 0 0;
     }
-    
-    @media (max-width: 1024px) {
-        width: 35px;
-        height: 35px;
-        
-        &:before {
-            width: 12px;
-            height: 12px;
-        }
-    }
-    
-    @media (max-width: 768px) {
-        width: 30px;
-        height: 30px;
-        top: 100%;
-        
-        &:before {
-            width: 10px;
-            height: 10px;
-        }
-    }
 }
 
 .slick-prev {
@@ -97,18 +42,6 @@
     
     &:before {
         transform: translate(-50%, -50%) rotate(-135deg);
-    }
-    
-    @media (max-width: 1024px) {
-        left: 35%;
-    }
-    
-    @media (max-width: 768px) {
-        left: 30%;
-    }
-    
-    @media (max-width: 480px) {
-        left: 25%;
     }
 }
 
@@ -118,21 +51,13 @@
     &:before {
         transform: translate(-50%, -50%) rotate(45deg);
     }
-    
-    @media (max-width: 1024px) {
-        right: 35%;
-    }
-    
-    @media (max-width: 768px) {
-        right: 30%;
-    }
-    
-    @media (max-width: 480px) {
-        right: 25%;
-    }
 }
 
-/* Точки */
+/* Стили для dots */
+.slick-track{
+    display: flex;
+    gap: 20px;
+}
 .slick-dots {
     position: relative;
     bottom: 0;
@@ -142,11 +67,6 @@
     gap: 10px;
     list-style: none;
     padding: 0;
-    
-    @media (max-width: 768px) {
-        margin-top: 25px;
-        gap: 8px;
-    }
 }
 
 .slick-dots li {
@@ -163,16 +83,6 @@
     cursor: pointer;
     font-size: 0;
     transition: all 0.3s ease;
-    
-    @media (max-width: 768px) {
-        width: 10px;
-        height: 10px;
-    }
-    
-    &:hover {
-        background: var(--color-accent);
-        opacity: 0.8;
-    }
 }
 
 .slick-dots li.slick-active button {
@@ -180,7 +90,15 @@
     transform: scale(1.2);
 }
 
-.slick-dots li button:before,
-.slick-dots li.slick-active button:before {
+.slick-dots li button:hover {
+    background: var(--color-accent);
+    opacity: 0.8;
+}
+
+.slick-dots li button:before {
+    color: transparent;
+}
+
+.slick-dots li.slick-active button:before  {
     color: transparent;
 }
