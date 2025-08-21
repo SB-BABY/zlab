@@ -1,0 +1,210 @@
+.sertificate {
+    padding: 4rem 0;
+    background: var(--color-gray-light);
+
+    &__container {
+        position: relative;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    &__subtitle {
+        text-align: center;
+        // font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    &__slider {
+        position: relative;
+        padding: 0 50px; // Место для стрелок
+    }
+
+    &__list {
+        margin: 0 -10px;
+    }
+
+    &__item {
+        // Фиксированное вертикальное соотношение сторон 3:4
+        aspect-ratio: 3/4;
+        background: var(--color-gray-light);
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        @include shadow;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding: 15px;
+        margin: 0 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+        // Уменьшаем эффект наведения на мобильных
+        @media (hover: hover) {
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+                
+                .sertificate__img {
+                    transform: scale(1.05);
+                }
+            }
+        }
+        
+        // Адаптация для мобильных
+        @media (max-width: 768px) {
+            border-radius: calc(var(--border-radius) - 2px);
+        }
+        
+        @media (max-width: 480px) {
+            aspect-ratio: 2/3; // Более вертикальные на маленьких экранах
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        display: block;
+        transition: transform 0.3s ease;
+
+        // Дополнительные стили для лучшего отображения
+        &[data-orientation="horizontal"] {
+            // Для горизонтальных фото можно немного подкорректировать
+            object-position: center top;
+        }
+
+        &[data-orientation="vertical"] {
+            // Для вертикальных фото
+            object-position: center center;
+        }
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+
+        // Оптимизация для мобильных
+        @media (max-width: 768px) {
+            // Улучшаем производительность
+            transform: translateZ(0);
+            backface-visibility: hidden;
+        }
+        
+        // Для очень маленьких экранов
+        @media (max-width: 360px) {
+            object-position: center center;
+        }
+    }
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        cursor: pointer;
+    }
+
+    &__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 90%;
+        max-height: 90%;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    &__close {
+        position: absolute;
+        top: -40px;
+        right: -40px;
+        width: 30px;
+        height: 30px;
+        border: none;
+        background: var(--color-accent);
+        color: white;
+        border-radius: 50%;
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 1001;
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    &__img {
+        max-width: 100%;
+        max-height: 80vh;
+        object-fit: contain;
+    }
+
+    // Класс для показа модалки
+    &.active {
+        display: block;
+    }
+}
+
+/* Адаптивность */
+/* Адаптивность */
+@media (max-width: 768px) {
+    .sertificate {
+        padding: 2rem 0;
+
+        &__slider {
+            padding: 0 30px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .sertificate {
+        &__slider {
+            padding: 0 20px;
+        }
+    }
+    
+    // Скрываем стрелки на очень маленьких экранах
+    .slick-arrow {
+        display: none !important;
+    }
+}
+
+// Landscape режим для мобильных
+@media (max-height: 500px) and (orientation: landscape) {
+    .sertificate {
+        &__item {
+            aspect-ratio: 3/4;
+            
+            @supports not (aspect-ratio: 3/4) {
+                padding-bottom: 133.33%;
+            }
+        }
+    }
+    
+    .modal {
+        &__content {
+            max-height: 85vh;
+        }
+        
+        &__img {
+            max-height: 75vh;
+        }
+    }
+}

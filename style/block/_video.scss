@@ -1,0 +1,221 @@
+.video {
+    padding: 4rem 0;
+    background: var(--color-gray-light);
+    position: relative;
+    
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    &__title {
+        // font-size: 2.5rem;
+        font-weight: bold;
+        color: var(--color-text);
+        text-align: center;
+        margin-bottom: 1rem;
+        
+        @media (max-width: 768px) {
+            font-size: 2rem;
+        }
+    }
+    
+    &__subtitle {
+        font-size: 1.1rem;
+        color: var(--color-text-secondary);
+        text-align: center;
+        margin-bottom: 3rem;
+        max-width: 600px;
+    }
+    
+    &__wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto 2rem;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        @include shadow;
+        background: #000;
+        
+        &:hover {
+            .video__play-button {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+        }
+    }
+    
+    &__player {
+        width: 100%;
+        height: auto;
+        aspect-ratio: auto ;
+        display: block;
+        border-radius: var(--border-radius);
+        transition: opacity 0.3s ease;
+        
+        &::-webkit-media-controls {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        &:hover::-webkit-media-controls {
+            opacity: 1;
+        }
+    }
+    
+    &__play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80px;
+        height: 80px;
+        border: none;
+        border-radius: 50%;
+        background: rgba(var(--color-accent-rgb), 0.9);
+        color: white;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        &:hover {
+            background: var(--color-accent);
+            transform: translate(-50%, -50%) scale(1.15);
+        }
+        
+        // Скрываем кнопку когда видео играет
+        .video__player.playing ~ & {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+    
+    &__play-icon {
+        width: 30px;
+        height: 30px;
+        margin-left: 5px; // Смещение для треугольник play
+    }
+    
+    &__loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+        z-index: 5;
+        
+        .video__player.loading ~ & {
+            display: block;
+        }
+    }
+    
+    &__loader-spinner {
+        width: 50px;
+        height: 50px;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        border-top: 3px solid var(--color-accent);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+    
+    &__info {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    &__info-text {
+        color: var(--color-text-secondary);
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
+
+// Анимация загрузчика
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+// Стили для состояния загрузки
+.video__player.loading {
+    opacity: 0.7;
+}
+
+// Адаптивность
+@media (max-width: 968px) {
+    .video {
+        padding: 3rem 0;
+        
+        &__wrapper {
+            margin-bottom: 1.5rem;
+        }
+        
+        &__play-button {
+            width: 60px;
+            height: 60px;
+        }
+        
+        &__play-icon {
+            width: 25px;
+            height: 25px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .video {
+        padding: 2rem 0;
+        
+        &__title {
+            font-size: 2rem;
+        }
+        
+        &__subtitle {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        &__play-button {
+            width: 50px;
+            height: 50px;
+        }
+        
+        &__play-icon {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+// Дополнительные декоративные элементы (опционально)
+.video::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--color-border) 50%, 
+        transparent 100%);
+}
+
+.video::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--color-border) 50%, 
+        transparent 100%);
+}

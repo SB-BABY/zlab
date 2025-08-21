@@ -4,13 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-     <!-- SLIDER -->
-       <!-- Добавляем стили из CDN -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-     <!-- SLIDER -->
-      <!-- CSS -->
+    <!-- FAFAICON -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- FAFAICON -->
+    <!-- SLIDER -->
+    <!-- Добавляем стили из CDN -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <!-- SLIDER -->
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- CSS -->
     <title>ZLAB</title>
@@ -61,12 +74,12 @@
             >
           </div>
         </div>
-		<!-- burger -->
-		<button
+        <!-- burger -->
+        <button
           class="button__burger-menu burger-button visible-mobile"
           type="button"
           onclick="mobileOverlay.showModal()"
-        >
+        ></button>
       </div>
     </header>
     <!-- END HEADER -->
@@ -107,71 +120,111 @@
       <!-- HERO -->
 
       <!-- DESCR -->
-      <section class="descr">
+      <section class="descr" id="about">
         <div class="descr__container container">
-          <h2 class="descr__title">
-            Z.Lab — студия красоты
-          </h2>
+          <div class="descr__header">
+            <h2 class="descr__title">Z.Lab — студия красоты</h2>
+          </div>
 
-          <div class="descr__info">
-            <div class="descr__text">
-              <p>
-                Студия красоты Z.Lab была основана более 4х лет назад и с каждым годом мы совершенствуем свои навыки, чтобы дарить Вам уверенность в каждом дне. С момента открытия мы стремительно развиваемся, предлагая клиентам высококачественные и безопасные услуги в сфере красоты.
+          <div class="descr__content">
+            <div class="descr__text-block">
+              <p class="descr__text">
+                Студия красоты Z.Lab была основана более 4х лет назад и с каждым
+                годом мы совершенствуем свои навыки, чтобы дарить Вам
+                уверенность в каждом дне. С момента открытия мы стремительно
+                развиваемся, предлагая клиентам высококачественные и безопасные
+                услуги в сфере красоты.
               </p>
-
-              <p>
-                Наши мастера имеют большой опыт в наращивании ресниц, а ведущий мастер перманентного макияжа Елена, является дипломированным специалистом в области архитектуры бровей, перманентного макияжа и эпидермальных техник, с опытом более 8 лет, имеет международные сертификаты, является выпускником международной академии Lash&Brow и дипломированным специалистом по мануальным техникам перманента. Также она — действующий член профессиональной ассоциации мастеров ПМ-системы ГРАТАЖ.
+              <p class="descr__text">
+                Наши мастера имеют большой опыт в наращивании ресниц, а ведущий
+                мастер перманентного макияжа Елена, является дипломированным
+                специалистом в области архитектуры бровей, перманентного макияжа
+                и эпидермальных техник, с опытом более 8 лет, имеет
+                международные сертификаты, является выпускником международной
+                академии Lash&Brow и дипломированным специалистом по мануальным
+                техникам перманента. Также она — действующий член
+                профессиональной ассоциации мастеров ПМ-системы ГРАТАЖ.
               </p>
             </div>
 
-            <img class="descr__img" src="./img/descr/descr.jpg" alt="изображение zlab">
+            <div class="descr__image-block">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%20beauty%20master%20Elena%20working%20on%20permanent%20makeup%20procedure%2C%20experienced%20woman%20in%20white%20coat%2C%20clean%20beauty%20salon%20environment%2C%20professional%20permanent%20makeup%20equipment%2C%20focused%20master%20at%20work%2C%20elegant%20studio%20interior%20with%20purple%20accents&amp;width=600&amp;height=400&amp;seq=master-001&amp;orientation=landscape"
+                alt="Мастер Елена за работой"
+                class="descr__image"
+              />
+            </div>
           </div>
 
           <div class="descr__advantages">
-            <h3 class="descr__advantages-title">
-              Наши преимущества
-            </h3>
+            <h3 class="descr__advantages-title">Наши преимущества</h3>
 
-            <div class="descr__advantages-list">
-              <div class="descr__advantages-item">
-                <h4 class="descr__advantages-item-title">
+            <div class="descr__advantages-grid">
+              <div class="descr__advantage-card">
+                <h4 class="descr__advantage-card-title">
+                  <span class="descr__advantage-icon">🏆</span>
                   Международная сертификация
                 </h4>
-                <ul class="descr__advantages-item-list">
-                  <li>Yumi Lashes</li>
-                  <li>LVL ENHANCE</li>
-                  <li>VELVET</li>
-                  <li>и другие программы международного уровня</li>
+                <ul class="descr__advantage-list">
+                  <li class="descr__advantage-item">
+                    <span class="descr__advantage-check">✓</span>
+                    Yumi Lashes
+                  </li>
+                  <li class="descr__advantage-item">
+                    <span class="descr__advantage-check">✓</span>
+                    LVL ENHANCE
+                  </li>
+                  <li class="descr__advantage-item">
+                    <span class="descr__advantage-check">✓</span>
+                    VELVET
+                  </li>
+                  <li class="descr__advantage-item">
+                    <span class="descr__advantage-check">✓</span>
+                    и другие программы международного уровня
+                  </li>
                 </ul>
               </div>
 
-              <div class="descr__advantages-item">
-                <h4 class="descr__advantages-item-title">
+              <div class="descr__advantage-card">
+                <h4 class="descr__advantage-card-title">
+                  <span class="descr__advantage-icon">💖</span>
                   Индивидуальный подход к каждой процедуре
                 </h4>
-                <p class="descr__advantages-item-subtitle">
+                <p class="descr__advantage-subtitle">
                   Мы учитываем все ключевые параметры:
                 </p>
-                <ul class="descr__advantages-item-list">
-                  <li>анатомию лица</li>
-                  <li>тип и состояние кожи</li>
-                  <li>возраст</li>
-                  <li>индивидуальные пожелания клиента</li>
+                <ul class="descr__advantage-list">
+                  <li class="descr__advantage-item">
+                    <span class="descr__advantage-bullet"></span>
+                    анатомию лица
+                  </li>
+                  <li class="descr__advantage-item">
+                    <span class="descr__advantage-bullet"></span>
+                    тип и состояние кожи
+                  </li>
+                  <li class="descr__advantage-item">
+                    <span class="descr__advantage-bullet"></span>
+                    возраст
+                  </li>
+                  <li class="descr__advantage-item">
+                    <span class="descr__advantage-bullet"></span>
+                    индивидуальные пожелания клиента
+                  </li>
                 </ul>
-
-                <p class="descr__advantages-item-descr">
-                  Благодаря такому подходу результат всегда максимально естественный и гармоничный.
+                <p class="descr__advantage-note">
+                  Благодаря такому подходу результат всегда максимально
+                  естественный и гармоничный.
                 </p>
               </div>
             </div>
 
-            <div class="descr__advantages-why">
-              <h3 class="descr__advantages-title">
-                Почему выбирают Z.Lab
-              </h3>
-
-              <p class="descr__advantages-text">
-                В студии Z.Lab мы создаём красоту с душой. Каждая процедура проводится с соблюдением высоких стандартов качества и безопасности. Мы искренне любим своё дело и ценим доверие клиентов, которые возвращаются к нам снова и снова.
+            <div class="descr__why">
+              <h4 class="descr__why-title">Почему выбирают Z.Lab</h4>
+              <p class="descr__why-text">
+                В студии Z.Lab мы создаём красоту с душой. Каждая процедура
+                проводится с соблюдением высоких стандартов качества и
+                безопасности. Мы искренне любим своё дело и ценим доверие
+                клиентов, которые возвращаются к нам снова и снова.
               </p>
             </div>
           </div>
@@ -182,12 +235,12 @@
       <!-- RECORD -->
       <section class="record">
         <div class="record__container container">
-          <h2 class="record__title">
-            Запишитесь на процедуры в Z.Lab
-          </h2>
+          <h2 class="record__title">Запишитесь на процедуры в Z.Lab</h2>
 
           <div class="record__text">
-            Мы предлагаем профессиональный уход за бровями и ресницами, который подчёркивает природную красоту, корректирует визуальные недостатки и сохраняет здоровье кожи
+            Мы предлагаем профессиональный уход за бровями и ресницами, который
+            подчёркивает природную красоту, корректирует визуальные недостатки и
+            сохраняет здоровье кожи
           </div>
 
           <a href="#" class="record__btn button-second">Записаться</a>
@@ -198,12 +251,7 @@
       <!-- SERVICE -->
       <section class="service">
         <div class="service__container container">
-
-          
-
-          <h2 class="service__title">
-            Наши услуги
-          </h2>
+          <h2 class="service__title">Наши услуги</h2>
           <p class="service__subtitle">
             Профессиональный уход для вашей красоты
           </p>
@@ -213,198 +261,54 @@
               <div class="service__stock">
                 <span>Акция</span>
               </div>
-              <img src="./img/descr/descr.jpg" alt="Перманентный макияж
-" class="service__img">
-              <h3 class="service__item-title">
-                Перманентный макияж
-              </h3>
+              <img
+                src="./img/descr/descr.jpg"
+                alt="Перманентный макияж
+"
+                class="service__img"
+              />
+              <h3 class="service__item-title">Перманентный макияж</h3>
               <div class="service__price">
-                <p class="service__price-new">
-                6 500 <span>₽</span>
-              </p>
-              <p class="service__price-old">
-                6 500 <span>₽</span>
-              </p>
+                <p class="service__price-text">Только до 30 сентября</p>
+                <div>
+                  <p class="service__price-new">6 500 <span>₽</span></p>
+                  <p class="service__price-old">6 500 <span>₽</span></p>
+                </div>
               </div>
 
               <p class="service__text">
-                Профессиональный перманентный макияж бровей, губ и межресничного пространства. Натуральный результат на долгие годы.
+                Профессиональный перманентный макияж бровей, губ и межресничного
+                пространства. Натуральный результат на долгие годы.
               </p>
 
-              <ul>
-                <li>Консультация мастера</li>
-                <li>Индивидуальный дизайн</li>
-                <li>Безболезненная процедура</li>
-                <li>Гарантия результата</li>
-              </ul>
-
               <a href="#" class="service__btn button-small">Записаться</a>
-
             </div>
 
             <div class="service__item">
               <div class="service__stock">
-                <span>Акция</span>
+                <!-- <span>Акция</span> -->
               </div>
-              <img src="./img/descr/descr.jpg" alt="Перманентный макияж
-" class="service__img">
-              <h3 class="service__item-title">
-                Перманентный макияж
-              </h3>
+              <img
+                src="./img/descr/descr.jpg"
+                alt="Перманентный макияж
+"
+                class="service__img"
+              />
+              <h3 class="service__item-title">Перманентный макияж</h3>
               <div class="service__price">
-                <p class="service__price-new">
-                6 500 <span>₽</span>
-              </p>
-              <p class="service__price-old">
-                6 500 <span>₽</span>
-              </p>
+                <!-- <p class="service__price-text">Только до 30 сентября</p> -->
+                <div>
+                  <p class="service__price-new">6 500 <span>₽</span></p>
+                  <!-- <p class="service__price-old">6 500 <span>₽</span></p> -->
+                </div>
               </div>
 
               <p class="service__text">
-                Профессиональный перманентный макияж бровей, губ и межресничного пространства. Натуральный результат на долгие годы.
+                Профессиональный перманентный макияж бровей, губ и межресничного
+                пространства. Натуральный результат на долгие годы.
               </p>
-
-              <ul>
-                <li>Консультация мастера</li>
-                <li>Индивидуальный дизайн</li>
-                <li>Безболезненная процедура</li>
-                <li>Гарантия результата</li>
-              </ul>
 
               <a href="#" class="service__btn button-small">Записаться</a>
-
-            </div>
-
-            <div class="service__item">
-              <div class="service__stock">
-                <span>Акция</span>
-              </div>
-              <img src="./img/descr/descr.jpg" alt="Перманентный макияж
-" class="service__img">
-              <h3 class="service__item-title">
-                Перманентный макияж
-              </h3>
-              <div class="service__price">
-                <p class="service__price-new">
-                6 500 <span>₽</span>
-              </p>
-              <p class="service__price-old">
-                6 500 <span>₽</span>
-              </p>
-              </div>
-
-              <p class="service__text">
-                Профессиональный перманентный макияж бровей, губ и межресничного пространства. Натуральный результат на долгие годы.
-              </p>
-
-              <ul>
-                <li>Консультация мастера</li>
-                <li>Индивидуальный дизайн</li>
-                <li>Безболезненная процедура</li>
-                <li>Гарантия результата</li>
-              </ul>
-
-              <a href="#" class="service__btn button-small">Записаться</a>
-
-            </div>
-
-            <div class="service__item">
-              <div class="service__stock">
-                <span>Акция</span>
-              </div>
-              <img src="./img/descr/descr.jpg" alt="Перманентный макияж
-" class="service__img">
-              <h3 class="service__item-title">
-                Перманентный макияж
-              </h3>
-              <div class="service__price">
-                <p class="service__price-new">
-                6 500 <span>₽</span>
-              </p>
-              <p class="service__price-old">
-                6 500 <span>₽</span>
-              </p>
-              </div>
-
-              <p class="service__text">
-                Профессиональный перманентный макияж бровей, губ и межресничного пространства. Натуральный результат на долгие годы.
-              </p>
-
-              <ul>
-                <li>Консультация мастера</li>
-                <li>Индивидуальный дизайн</li>
-                <li>Безболезненная процедура</li>
-                <li>Гарантия результата</li>
-              </ul>
-
-              <a href="#" class="service__btn button-small">Записаться</a>
-
-            </div>
-
-            <div class="service__item">
-              <div class="service__stock">
-                <span>Акция</span>
-              </div>
-              <img src="./img/descr/descr.jpg" alt="Перманентный макияж
-" class="service__img">
-              <h3 class="service__item-title">
-                Перманентный макияж
-              </h3>
-              <div class="service__price">
-                <p class="service__price-new">
-                6 500 <span>₽</span>
-              </p>
-              <p class="service__price-old">
-                6 500 <span>₽</span>
-              </p>
-              </div>
-
-              <p class="service__text">
-                Профессиональный перманентный макияж бровей, губ и межресничного пространства. Натуральный результат на долгие годы.
-              </p>
-
-              <ul>
-                <li>Консультация мастера</li>
-                <li>Индивидуальный дизайн</li>
-                <li>Безболезненная процедура</li>
-                <li>Гарантия результата</li>
-              </ul>
-
-              <a href="#" class="service__btn button-small">Записаться</a>
-
-            </div>
-
-            <div class="service__item">
-              <div class="service__stock">
-                <span>Акция</span>
-              </div>
-              <img src="./img/descr/descr.jpg" alt="Перманентный макияж
-" class="service__img">
-              <h3 class="service__item-title">
-                Перманентный макияж
-              </h3>
-              <div class="service__price">
-                <p class="service__price-new">
-                6 500 <span>₽</span>
-              </p>
-              <p class="service__price-old">
-                6 500 <span>₽</span>
-              </p>
-              </div>
-
-              <p class="service__text">
-                Профессиональный перманентный макияж бровей, губ и межресничного пространства. Натуральный результат на долгие годы.
-              </p>
-
-              <ul>
-                <li>Консультация мастера</li>
-                <li>Индивидуальный дизайн</li>
-                <li>Безболезненная процедура</li>
-                <li>Гарантия результата</li>
-              </ul>
-
-              <a href="#" class="service__btn button-small">Записаться</a>
-
             </div>
 
           </div>
@@ -412,94 +316,503 @@
       </section>
       <!-- SERVICE -->
 
-      <!-- JOBS -->
-       <section class="jobs">
-        <div class="jobs__container container">
-          <h2 class="jobs__title">
-            Наши работы
-          </h2>
-
-          <p class="jobs__subtitle">
-            Результаты, которые говорят сами за себя
+      <!-- VIDEO -->
+      <section class="video">
+        <div class="video__container container">
+          <h2 class="video__title">Наше видео</h2>
+          <p class="video__subtitle">
+            Ознакомьтесь с нашим проектом в движении
           </p>
+
+          <div class="video__wrapper">
+            <video class="video__player" controls>
+              <!-- Добавьте видеофайлы в разных форматах для кроссбраузерности -->
+              <source src="./video/video3.mp4" type="video/mp4" />
+              <!-- <source src="./video/promo-video.webm" type="video/webm" /> -->
+              Ваш браузер не поддерживает видео.
+            </video>
+
+            <!-- Загрузчик -->
+            <div class="video__loader">
+              <div class="video__loader-spinner"></div>
+            </div>
+          </div>
+
+          <!-- Дополнительная информация под видео -->
+          <div class="video__info">
+            <p class="video__info-text">
+              Узнайте больше о наших услугах и атмосфере студии из нашего
+              промо-ролика
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- VIDEO -->
+
+      <!-- JOBS -->
+      <section class="jobs">
+        <div class="jobs__container container">
+          <h2 class="jobs__title">Наши работы</h2>
+
+          <p class="jobs__subtitle">Результаты, которые говорят сами за себя</p>
 
           <div class="jobs__list">
             <div class="jobs__item">
-              <h3 class="jobs__item-title">
-                Перманентный макияж бровей 1
-              </h3>
+              <h3 class="jobs__item-title">Перманентный макияж бровей 1</h3>
 
               <div class="jobs__imgs">
                 <div class="jobs__before">
                   <p>До</p>
 
-                  <img src="https://readdy.ai/api/search-image?query=Before%20permanent%20makeup%20eyebrows%20photo%2C%20natural%20uneven%20eyebrows%20without%20makeup%2C%20clean%20face%2C%20professional%20beauty%20salon%20photography%2C%20clear%20lighting%2C%20realistic%20skin%20texture%2C%20woman%20face%20close-up&width=400&height=300&seq=before-001&orientation=landscape" alt="">
-
-
+                  <img
+                    src="https://readdy.ai/api/search-image?query=Before%20permanent%20makeup%20eyebrows%20photo%2C%20natural%20uneven%20eyebrows%20without%20makeup%2C%20clean%20face%2C%20professional%20beauty%20salon%20photography%2C%20clear%20lighting%2C%20realistic%20skin%20texture%2C%20woman%20face%20close-up&width=400&height=300&seq=before-001&orientation=landscape"
+                    alt=""
+                  />
                 </div>
-                 <div class="jobs__after">
+                <div class="jobs__after">
                   <p>После</p>
 
-                  <img src="https://readdy.ai/api/search-image?query=After%20permanent%20makeup%20eyebrows%20photo%2C%20perfectly%20shaped%20symmetrical%20eyebrows%20with%20natural%20permanent%20makeup%2C%20beautiful%20results%2C%20professional%20beauty%20salon%20photography%2C%20clear%20lighting%2C%20realistic%20skin%20texture%2C%20woman%20face%20close-up&width=400&height=300&seq=after-001&orientation=landscape" alt="">
-
-
+                  <img
+                    src="https://readdy.ai/api/search-image?query=After%20permanent%20makeup%20eyebrows%20photo%2C%20perfectly%20shaped%20symmetrical%20eyebrows%20with%20natural%20permanent%20makeup%2C%20beautiful%20results%2C%20professional%20beauty%20salon%20photography%2C%20clear%20lighting%2C%20realistic%20skin%20texture%2C%20woman%20face%20close-up&width=400&height=300&seq=after-001&orientation=landscape"
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
 
             <div class="jobs__item">
-              <h3 class="jobs__item-title">
-                Перманентный макияж бровей 2
-              </h3>
+              <h3 class="jobs__item-title">Перманентный макияж бровей 2</h3>
 
               <div class="jobs__imgs">
                 <div class="jobs__before">
                   <p>До</p>
 
-                  <img src="https://readdy.ai/api/search-image?query=Before%20permanent%20makeup%20eyebrows%20photo%2C%20natural%20uneven%20eyebrows%20without%20makeup%2C%20clean%20face%2C%20professional%20beauty%20salon%20photography%2C%20clear%20lighting%2C%20realistic%20skin%20texture%2C%20woman%20face%20close-up&width=400&height=300&seq=before-001&orientation=landscape" alt="">
-
-
+                  <img
+                    src="https://readdy.ai/api/search-image?query=Before%20permanent%20makeup%20eyebrows%20photo%2C%20natural%20uneven%20eyebrows%20without%20makeup%2C%20clean%20face%2C%20professional%20beauty%20salon%20photography%2C%20clear%20lighting%2C%20realistic%20skin%20texture%2C%20woman%20face%20close-up&width=400&height=300&seq=before-001&orientation=landscape"
+                    alt=""
+                  />
                 </div>
-                 <div class="jobs__after">
+                <div class="jobs__after">
                   <p>После</p>
 
-                  <img src="https://readdy.ai/api/search-image?query=After%20permanent%20makeup%20eyebrows%20photo%2C%20perfectly%20shaped%20symmetrical%20eyebrows%20with%20natural%20permanent%20makeup%2C%20beautiful%20results%2C%20professional%20beauty%20salon%20photography%2C%20clear%20lighting%2C%20realistic%20skin%20texture%2C%20woman%20face%20close-up&width=400&height=300&seq=after-001&orientation=landscape" alt="">
-
-
+                  <img
+                    src="https://readdy.ai/api/search-image?query=After%20permanent%20makeup%20eyebrows%20photo%2C%20perfectly%20shaped%20symmetrical%20eyebrows%20with%20natural%20permanent%20makeup%2C%20beautiful%20results%2C%20professional%20beauty%20salon%20photography%2C%20clear%20lighting%2C%20realistic%20skin%20texture%2C%20woman%20face%20close-up&width=400&height=300&seq=after-001&orientation=landscape"
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
 
             <div class="jobs__item">
-              <h3 class="jobs__item-title">
-                Перманентный макияж бровей 3
-              </h3>
+              <h3 class="jobs__item-title">Перманентный макияж бровей 3</h3>
 
               <div class="jobs__imgs">
                 <div class="jobs__before">
                   <p>До</p>
 
-                  <img src="https://readdy.ai/api/search-image?query=Before%20permanent%20makeup%20eyebrows%20photo%2C%20natural%20uneven%20eyebrows%20without%20makeup%2C%20clean%20face%2C%20professional%20beauty%20salon%20photography%2C%20clear%20lighting%2C%20realistic%20skin%20texture%2C%20woman%20face%20close-up&width=400&height=300&seq=before-001&orientation=landscape" alt="">
-
-
+                  <img
+                    src="https://readdy.ai/api/search-image?query=Before%20permanent%20makeup%20eyebrows%20photo%2C%20natural%20uneven%20eyebrows%20without%20makeup%2C%20clean%20face%2C%20professional%20beauty%20salon%20photography%2C%20clear%20lighting%2C%20realistic%20skin%20texture%2C%20woman%20face%20close-up&width=400&height=300&seq=before-001&orientation=landscape"
+                    alt=""
+                  />
                 </div>
-                 <div class="jobs__after">
+                <div class="jobs__after">
                   <p>После</p>
 
-                  <img src="https://readdy.ai/api/search-image?query=After%20permanent%20makeup%20eyebrows%20photo%2C%20perfectly%20shaped%20symmetrical%20eyebrows%20with%20natural%20permanent%20makeup%2C%20beautiful%20results%2C%20professional%20beauty%20salon%20photography%2C%20clear%20lighting%2C%20realistic%20skin%20texture%2C%20woman%20face%20close-up&width=400&height=300&seq=after-001&orientation=landscape" alt="">
-
-
+                  <img
+                    src="https://readdy.ai/api/search-image?query=After%20permanent%20makeup%20eyebrows%20photo%2C%20perfectly%20shaped%20symmetrical%20eyebrows%20with%20natural%20permanent%20makeup%2C%20beautiful%20results%2C%20professional%20beauty%20salon%20photography%2C%20clear%20lighting%2C%20realistic%20skin%20texture%2C%20woman%20face%20close-up&width=400&height=300&seq=after-001&orientation=landscape"
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
           </div>
         </div>
-       </section>
+      </section>
       <!-- JOBS -->
+
+      <!-- SERTIFICATE -->
+      <section class="sertificate">
+        <div class="sertificate__container container">
+          <h2 class="sertificate__title">Наши сертификаты</h2>
+
+          <p class="sertificate__subtitle">Подтверждение нашей квалификации</p>
+          <div class="sertificate__slider">
+            <ul class="sertificate__list">
+              <li class="sertificate__item">
+                <img
+                  src="./img/sertificate/1.jpeg"
+                  alt=""
+                  class="sertificate__img"
+                />
+              </li>
+              <li class="sertificate__item">
+                <img
+                  src="./img/sertificate/2.jpeg"
+                  alt=""
+                  class="sertificate__img"
+                />
+              </li>
+              <li class="sertificate__item">
+                <img
+                  src="./img/sertificate/3.jpg"
+                  alt=""
+                  class="sertificate__img"
+                />
+              </li>
+              <li class="sertificate__item">
+                <img
+                  src="./img/descr/descr.jpg"
+                  alt=""
+                  class="sertificate__img"
+                />
+              </li>
+              <li class="sertificate__item">
+                <img
+                  src="./img/descr/descr.jpg"
+                  alt=""
+                  class="sertificate__img"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- SERTIFICATE -->
+
+      <!-- ONLINE -->
+      <section class="online">
+        <div class="online__container container">
+          <div class="online__content">
+            <div class="online__info">
+              <h2 class="online__title">Записаться на приём</h2>
+              <p class="online__subtitle">
+                Оставьте свои данные, и наш администратор свяжется с вами.
+              </p>
+
+              <div class="online__contacts">
+                <h3 class="online__contacts-title">Контакты</h3>
+                <div class="online__contacts-list">
+                  <div class="online__contact-item">
+                    <i class="online__contact-icon">📍</i>
+                    <span class="online__contact-text"
+                      >г. Санкт-Петербург, ул. Есенина, 12, корп. 1</span
+                    >
+                  </div>
+                  <div class="online__contact-item">
+                    <i class="online__contact-icon">📞</i>
+                    <a href="tel:+79818460505" class="online__contact-text"
+                      >+7 (981) 846-05-05</a
+                    >
+                  </div>
+                  <div class="online__contact-item">
+                    <i class="online__contact-icon">✉️</i>
+                    <a
+                      href="mailto:info@zlab-beauty.ru"
+                      class="online__contact-text"
+                      >zlabozerki@mail.ru</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="online__advantages">
+                <h3 class="online__advantages-title">
+                  Почему стоит записаться сейчас?
+                </h3>
+                <div class="online__advantages-list">
+                  <div class="online__advantage-item">
+                    <i class="online__advantage-icon">🎁</i>
+                    <span class="online__advantage-text"
+                      >Бесплатная консультация</span
+                    >
+                  </div>
+                  <div class="online__advantage-item">
+                    <i class="online__advantage-icon">❤️</i>
+                    <span class="online__advantage-text"
+                      >Подарок при первом посещении</span
+                    >
+                  </div>
+                  <div class="online__advantage-item">
+                    <i class="online__advantage-icon">🛡️</i>
+                    <span class="online__advantage-text"
+                      >Гарантия качества</span
+                    >
+                  </div>
+                  <div class="online__advantage-item">
+                    <i class="online__advantage-icon">😊</i>
+                    <span class="online__advantage-text"
+                      >Индивидуальный подход</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="online__form-wrapper">
+              <form class="online__form" id="contact-form">
+                <div class="online__form-group">
+                  <label for="name" class="online__form-label"
+                    >Ваше имя *</label
+                  >
+                  <input
+                    id="name"
+                    required
+                    class="online__form-input"
+                    placeholder="Введите ваше имя"
+                    type="text"
+                    name="name"
+                  />
+                  <span class="online__form-error" id="name-error"></span>
+                </div>
+
+                <div class="online__form-group">
+                  <label for="phone" class="online__form-label"
+                    >Телефон *</label
+                  >
+                  <input
+                    id="phone"
+                    required
+                    class="online__form-input"
+                    placeholder="+7 (___) ___-__-__"
+                    type="tel"
+                    name="phone"
+                  />
+                  <span class="online__form-error" id="phone-error"></span>
+                </div>
+
+                <div class="online__form-group">
+                  <label for="service" class="online__form-label"
+                    >Интересующая услуга *</label
+                  >
+                  <div class="online__form-select-wrapper">
+                    <select
+                      id="service"
+                      required
+                      name="service"
+                      class="online__form-select"
+                    >
+                      <option value="">Выберите услугу</option>
+                      <option value="permanent-makeup">
+                        Перманентный макияж
+                      </option>
+                      <option value="eyebrow-shaping">Оформление бровей</option>
+                      <option value="lash-lamination">
+                        Ламинирование ресниц
+                      </option>
+                      <option value="consultation">Консультация</option>
+                    </select>
+                    <i class="online__form-select-arrow">▼</i>
+                  </div>
+                  <span class="online__form-error" id="service-error"></span>
+                </div>
+
+                <div class="online__form-group">
+                  <label for="message" class="online__form-label"
+                    >Сообщение</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    maxlength="500"
+                    rows="4"
+                    class="online__form-textarea"
+                    placeholder="Расскажите о ваших пожеланиях..."
+                  ></textarea>
+                  <div class="online__form-counter">
+                    <span id="message-counter">0</span>/500 символов
+                  </div>
+                </div>
+
+                <button type="submit" class="online__form-submit button">
+                  Отправить заявку
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ONLINE -->
+
+      <!-- MAP -->
+      <section class="map">
+        <div class="map__container container">
+          <div class="map__header">
+            <h2 class="map__title">Как нас найти</h2>
+            <p class="map__address">г. Санкт-Петербург, ул. Есенина, 12, корп. 1</p>
+          </div>
+
+          <div class="map__wrapper">
+            <div id="yandex-map" class="map__iframe">
+              <div style="position:relative;overflow:hidden;">
+                <a
+                  href="https://yandex.ru/maps/10/orel/?utm_medium=mapframe&utm_source=maps"
+                  style="color:#eee;font-size:12px;position:absolute;top:0px;"
+                  >Орёл</a
+                ><a
+                  href="https://yandex.ru/maps/2/saint-petersburg/house/ulitsa_yesenina_12k1/Z0kYdQRgSkAPQFhqfXxyeH1lZg==/?indoorLevel=1&ll=30.330358%2C60.039162&utm_medium=mapframe&utm_source=maps&z=16.7"
+                  style="color:#eee;font-size:12px;position:absolute;top:14px;"
+                  >Улица Есенина, 12к1 — Яндекс Карты</a
+                ><iframe
+                  src="https://yandex.ru/map-widget/v1/?indoorLevel=1&ll=30.330358%2C60.039162&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzQwMzY1MhJN0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0YPQu9C40YbQsCDQldGB0LXQvdC40L3QsCwgMTLQujEiCg2TpPJBFRoocEI%2C&z=16.7"
+                  width="100%"
+                  height="400px"
+                  frameborder="1"
+                  allowfullscreen="true"
+                  style="position:relative;"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="map__info">
+            <div class="map__info-item">
+              <div class="map__info-icon">📍</div>
+              <h3 class="map__info-title">Адрес</h3>
+              <p class="map__info-text">г. Санкт-Петербург, ул. Есенина, 12, корп. 1</p>
+            </div>
+
+            <div class="map__info-item">
+              <div class="map__info-icon">🕒</div>
+              <h3 class="map__info-title">Режим работы</h3>
+              <p class="map__info-text">Ежедневно с 10:00 до 21:00</p>
+            </div>
+
+            <div class="map__info-item">
+              <div class="map__info-icon">🚗</div>
+              <h3 class="map__info-title">Парковка</h3>
+              <p class="map__info-text">Бесплатная парковка рядом</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- MAP -->
     </main>
     <!-- END MAIN -->
 
     <!-- START FOOTER -->
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__content">
+          <div class="footer__main">
+            <div class="footer__brand">
+              <div class="footer__logo">
+                <img
+                  src="https://static.readdy.ai/image/84b58619781f7e7644015f79afd883a9/b79b87040fe04f03916fd8f730b510fe.png"
+                  alt="Z.Lab Logo"
+                  class="footer__logo-img"
+                />
+                <span class="footer__logo-text">Z.Lab</span>
+              </div>
+              <p class="footer__description">
+                Студия красоты Z.Lab — место, где создается красота с душой. Мы
+                предлагаем профессиональный уход за бровями и ресницами с
+                использованием современных технологий и международных стандартов
+                качества.
+              </p>
+              <div class="footer__social">
+                <a
+                  href="https://wa.me/79818460505"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="footer__social-link footer__social-whatsapp"
+                >
+                  <span class="footer__social-icon">📱</span>
+                </a>
+                <a
+                  href="https://t.me/zlabbeauty"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="footer__social-link footer__social-telegram"
+                >
+                  <span class="footer__social-icon">✈️</span>
+                </a>
+                <a
+                  href="tel:+79818460505"
+                  class="footer__social-link footer__social-phone"
+                >
+                  <span class="footer__social-icon">📞</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="footer__nav">
+              <h3 class="footer__nav-title">Навигация</h3>
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item">
+                  <a href="#about" class="footer__nav-link">О нас</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="#services" class="footer__nav-link">Наши услуги</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="#works" class="footer__nav-link">Наши работы</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="#certificates" class="footer__nav-link"
+                    >Сертификаты</a
+                  >
+                </li>
+                <li class="footer__nav-item">
+                  <a href="#reviews" class="footer__nav-link">Отзывы</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer__contacts">
+              <h3 class="footer__contacts-title">Контакты</h3>
+              <div class="footer__contacts-list">
+                <div class="footer__contact-item">
+                  <span class="footer__contact-icon"
+                    ><i class="fas fa-map-marker-alt"></i
+                  ></span>
+                  <span class="footer__contact-text"
+                    >г. Санкт-Петербург, ул. Есенина, 12, корп. 1</span
+                  >
+                </div>
+                <div class="footer__contact-item">
+                  <span class="footer__contact-icon"
+                    ><i class="fas fa-phone"></i
+                  ></span>
+                  <a href="tel:+79818460505" class="footer__contact-link"
+                    >+7 (981) 846-05-05</a
+                  >
+                </div>
+                <div class="footer__contact-item">
+                  <span class="footer__contact-icon"
+                    ><i class="fas fa-envelope"></i
+                  ></span>
+                  <a
+                    href="mailto:info@zlab-beauty.ru"
+                    class="footer__contact-link"
+                    >zlabozerki@mail.ru</a
+                  >
+                </div>
+                <div class="footer__contact-item">
+                  <span class="footer__contact-icon"
+                    ><i class="fas fa-clock"></i
+                  ></span>
+                  <span class="footer__contact-text"
+                    >Ежедневно с 10:00 до 21:00</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer__bottom">
+            <div class="footer__copyright">
+              <p>© 2024 Z.Lab Beauty Studio. Все права защищены.</p>
+            </div>
+            <div class="footer__legal">
+              <a href="#" class="footer__legal-link"
+                >Политика конфиденциальности</a
+              >
+              <a href="#" class="footer__legal-link">Условия использования</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- END FOOTER -->
 
     <!-- START BURGER -->
@@ -529,16 +842,22 @@
           <li class="mobile-overlay__item">
             <a class="mobile-overlay__link" href="#">Отзывы</a>
           </li>
-		  
+
           <li class="mobile-overlay__item">
-            <a class="mobile-overlay__link header__contact-phone" href="#">+7 (981) 846-05-05</a>
+            <a class="mobile-overlay__link header__contact-phone" href="#"
+              >+7 (981) 846-05-05</a
+            >
           </li>
-		  
+
           <li class="mobile-overlay__item">
-            <a class="mobile-overlay__link header__contact-whatsapp" href="#">whataspp</a>
+            <a class="mobile-overlay__link header__contact-whatsapp" href="#"
+              >whataspp</a
+            >
           </li>
           <li class="mobile-overlay__item">
-            <a class="mobile-overlay__link header__contact-telegram" href="#">telegram</a>
+            <a class="mobile-overlay__link header__contact-telegram" href="#"
+              >telegram</a
+            >
           </li>
         </ul>
       </div>
@@ -546,11 +865,24 @@
     <!-- END BURGER -->
 
     <!-- START MODAL -->
+    <div class="modal" id="certificateModal">
+      <div class="modal__overlay"></div>
+      <div class="modal__content">
+        <button class="modal__close">&times;</button>
+        <img src="" alt="" class="modal__img" />
+      </div>
+    </div>
     <!-- END MODAL -->
 
     <!-- Сначала jQuery -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
     <script src="./script/main.js"></script>
     <script src="./script/slide.js"></script>
     <!-- JS -->

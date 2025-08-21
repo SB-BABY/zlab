@@ -1,0 +1,277 @@
+.footer {
+    background: var(--color-dark);
+    color: white;
+    padding: 4rem 0 2rem;
+    
+    &__container {
+        max-width: 1200px;
+    }
+    
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    &__main {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 3rem;
+    }
+    
+    // Бренд блок
+    &__brand {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    &__logo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        
+        &-img {
+            width: 50px;
+            height: 50px;
+            margin-right: 1rem;
+            object-fit: contain;
+        }
+        
+        &-text {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+        }
+    }
+    
+    &__description {
+        color: var(--color-gray-light);
+        line-height: 1.6;
+        margin-bottom: 2rem;
+        flex-grow: 1;
+    }
+    
+    &__social {
+        display: flex;
+        gap: 1rem;
+        
+        &-link {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            
+            &:hover {
+                transform: translateY(-3px);
+            }
+        }
+        
+        &-whatsapp {
+            background: #25D366;
+            
+            &:hover {
+                background: darken(#25D366, 10%);
+            }
+        }
+        
+        &-telegram {
+            background: #0088cc;
+            
+            &:hover {
+                background: darken(#0088cc, 10%);
+            }
+        }
+        
+        &-phone {
+            background: var(--color-accent);
+            
+            &:hover {
+                // background: darken(var(--color-accent), 10%);
+            }
+        }
+        
+        &-icon {
+            font-size: 1.2rem;
+        }
+    }
+    
+    // Навигация
+    &__nav {
+        &-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        &-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+        
+        &-item {
+            margin: 0;
+        }
+        
+        &-link {
+            color: var(--color-gray-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            
+            &:hover {
+                color: var(--color-accent);
+            }
+        }
+    }
+    
+    // Контакты
+    &__contacts {
+        &-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+    }
+    
+    &__contact {
+        &-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+        }
+        
+        &-icon {
+            width: 20px;
+            text-align: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        &-text {
+            color: var(--color-gray-light);
+            line-height: 1.4;
+        }
+        
+        &-link {
+            color: var(--color-gray-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            
+            &:hover {
+                color: var(--color-accent);
+            }
+        }
+    }
+    
+    // Нижняя часть
+    &__bottom {
+        border-top: 1px solid var(--color-border-dark);
+        padding-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    &__copyright {
+        color: var(--color-gray-light);
+        font-size: 0.9rem;
+    }
+    
+    &__legal {
+        display: flex;
+        gap: 1.5rem;
+        
+        &-link {
+            color: var(--color-gray-light);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+            
+            &:hover {
+                color: var(--color-accent);
+            }
+        }
+    }
+}
+
+// Адаптивность
+@media (max-width: 968px) {
+    .footer {
+        &__main {
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        
+        &__brand {
+            grid-column: 1 / -1;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 3rem 0 1.5rem;
+        
+        &__main {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        
+        &__logo {
+            &-img {
+                width: 40px;
+                height: 40px;
+            }
+            
+            &-text {
+                font-size: 1.5rem;
+            }
+        }
+        
+        &__social {
+            &-link {
+                width: 44px;
+                height: 44px;
+            }
+        }
+        
+        &__bottom {
+            flex-direction: column;
+            text-align: center;
+            gap: 1rem;
+        }
+        
+        &__legal {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        &__nav-list,
+        &__contacts-list {
+            gap: 0.5rem;
+        }
+        
+        &__social {
+            justify-content: center;
+        }
+    }
+}

@@ -1,8 +1,7 @@
 .service{
-    background: var(--color-gray-light);
+    // background: var(--color-gray-light);
     padding: 2rem 0;
 
-    
 
     &__title{
         font-weight: bold;
@@ -47,12 +46,20 @@
         position: absolute;
         top: 15px;
         right: 15px;
-        padding: 0.3rem .5rem;
+        
         z-index: 1;
-        background: red;
-        color: var(--color-light);
-        border-radius: var(--border-radius-small);
-        font-size: 12px;
+        
+        
+        
+
+        span{  
+            display: inline-block;
+            padding: 0.3rem .5rem;
+            background: red;
+            color: var(--color-light);
+            border-radius: var(--border-radius-small);
+            font-size: 1.3rem;
+        }
     }
 
     &__img{        
@@ -63,8 +70,19 @@
 
     &__price{
         display: flex;
-        align-items: center;
-        gap: 1rem;
+        flex-direction: column;
+        // align-items: center;
+        // gap: 1rem;
+        div{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        &-text{
+            color: var(--color-accent);
+            text-transform: uppercase;
+            // font-weight: bold;  
+        }
         &-new{
             font-size: 1.5rem;
             font-weight: bold;
@@ -73,26 +91,6 @@
         &-old{
             text-decoration: line-through;
             color: var(--color-gray);
-        }
-    }
-
-    ul{
-        list-style: none;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: .5rem;
-        font-size: .8rem;        
-    }
-
-    li{
-        text-decoration: none;
-        padding: 0;
-        &::before{
-            content: "✓";
-            padding-right: 10px;
-            color: var(--color-accent);
         }
     }
 }
