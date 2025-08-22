@@ -92,7 +92,6 @@
         <video class="hero__video" autoplay muted loop playsinline>
           <!-- Добавьте свои видеофайлы в разных форматах для кроссбраузерности -->
           <source src="./video/backvideo.mp4" type="video/mp4" />
-          <source src="video/background.webm" type="video/webm" />
           Ваш браузер не поддерживает видео.
         </video>
 
@@ -310,7 +309,6 @@
 
               <a href="#" class="service__btn button-small">Записаться</a>
             </div>
-
           </div>
         </div>
       </section>
@@ -353,81 +351,90 @@
       <section class="jobs">
         <div class="jobs__container container">
           <h2 class="jobs__title">Наши работы</h2>
-
           <p class="jobs__subtitle">Результаты, которые говорят сами за себя</p>
 
           <div class="jobs__list">
+            <!-- Первые 6 элементов будут показаны изначально -->
             <div class="jobs__item">
-              <h3 class="jobs__item-title">Перманентный макияж бровей 1</h3>
-
-              <div class="jobs__imgs">
-                <div class="jobs__before">
-                  <p>До</p>
-
-                  <img
-                    src="https://readdy.ai/api/search-image?query=Before%20permanent%20makeup%20eyebrows%20photo%2C%20natural%20uneven%20eyebrows%20without%20makeup%2C%20clean%20face%2C%20professional%20beauty%20salon%20photography%2C%20clear%20lighting%2C%20realistic%20skin%20texture%2C%20woman%20face%20close-up&width=400&height=300&seq=before-001&orientation=landscape"
-                    alt=""
-                  />
-                </div>
-                <div class="jobs__after">
-                  <p>После</p>
-
-                  <img
-                    src="https://readdy.ai/api/search-image?query=After%20permanent%20makeup%20eyebrows%20photo%2C%20perfectly%20shaped%20symmetrical%20eyebrows%20with%20natural%20permanent%20makeup%2C%20beautiful%20results%2C%20professional%20beauty%20salon%20photography%2C%20clear%20lighting%2C%20realistic%20skin%20texture%2C%20woman%20face%20close-up&width=400&height=300&seq=after-001&orientation=landscape"
-                    alt=""
-                  />
-                </div>
-              </div>
+              <img
+                src="./img/descr/descr.jpg"
+                alt="Работа 1"
+                class="jobs__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="jobs__item">
+              <img
+                src="./img/descr/descr.jpg"
+                alt="Работа 2"
+                class="jobs__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="jobs__item">
+              <img
+                src="./img/descr/descr.jpg"
+                alt="Работа 3"
+                class="jobs__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="jobs__item">
+              <img
+                src="./img/descr/descr.jpg"
+                alt="Работа 4"
+                class="jobs__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="jobs__item">
+              <img
+                src="./img/descr/descr.jpg"
+                alt="Работа 5"
+                class="jobs__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="jobs__item">
+              <img
+                src="./img/descr/descr.jpg"
+                alt="Работа 6"
+                class="jobs__img"
+                loading="lazy"
+              />
             </div>
 
-            <div class="jobs__item">
-              <h3 class="jobs__item-title">Перманентный макияж бровей 2</h3>
-
-              <div class="jobs__imgs">
-                <div class="jobs__before">
-                  <p>До</p>
-
-                  <img
-                    src="https://readdy.ai/api/search-image?query=Before%20permanent%20makeup%20eyebrows%20photo%2C%20natural%20uneven%20eyebrows%20without%20makeup%2C%20clean%20face%2C%20professional%20beauty%20salon%20photography%2C%20clear%20lighting%2C%20realistic%20skin%20texture%2C%20woman%20face%20close-up&width=400&height=300&seq=before-001&orientation=landscape"
-                    alt=""
-                  />
-                </div>
-                <div class="jobs__after">
-                  <p>После</p>
-
-                  <img
-                    src="https://readdy.ai/api/search-image?query=After%20permanent%20makeup%20eyebrows%20photo%2C%20perfectly%20shaped%20symmetrical%20eyebrows%20with%20natural%20permanent%20makeup%2C%20beautiful%20results%2C%20professional%20beauty%20salon%20photography%2C%20clear%20lighting%2C%20realistic%20skin%20texture%2C%20woman%20face%20close-up&width=400&height=300&seq=after-001&orientation=landscape"
-                    alt=""
-                  />
-                </div>
-              </div>
+            <!-- Следующие элементы (скрытые изначально) -->
+            <div class="jobs__item jobs__item--hidden">
+              <img
+                src="./img/descr/descr.jpg"
+                alt="Работа 7"
+                class="jobs__img"
+                loading="lazy"
+              />
             </div>
-
-            <div class="jobs__item">
-              <h3 class="jobs__item-title">Перманентный макияж бровей 3</h3>
-
-              <div class="jobs__imgs">
-                <div class="jobs__before">
-                  <p>До</p>
-
-                  <img
-                    src="https://readdy.ai/api/search-image?query=Before%20permanent%20makeup%20eyebrows%20photo%2C%20natural%20uneven%20eyebrows%20without%20makeup%2C%20clean%20face%2C%20professional%20beauty%20salon%20photography%2C%20clear%20lighting%2C%20realistic%20skin%20texture%2C%20woman%20face%20close-up&width=400&height=300&seq=before-001&orientation=landscape"
-                    alt=""
-                  />
-                </div>
-                <div class="jobs__after">
-                  <p>После</p>
-
-                  <img
-                    src="https://readdy.ai/api/search-image?query=After%20permanent%20makeup%20eyebrows%20photo%2C%20perfectly%20shaped%20symmetrical%20eyebrows%20with%20natural%20permanent%20makeup%2C%20beautiful%20results%2C%20professional%20beauty%20salon%20photography%2C%20clear%20lighting%2C%20realistic%20skin%20texture%2C%20woman%20face%20close-up&width=400&height=300&seq=after-001&orientation=landscape"
-                    alt=""
-                  />
-                </div>
-              </div>
+            <div class="jobs__item jobs__item--hidden">
+              <img
+                src="./img/descr/descr.jpg"
+                alt="Работа 8"
+                class="jobs__img"
+                loading="lazy"
+              />
             </div>
+            <!-- Добавьте остальные работы по аналогии -->
           </div>
+
+          <button class="jobs__more-btn button">Показать еще</button>
         </div>
       </section>
+
+      <!-- Модальное окно для просмотра изображений -->
+      <div class="modal" id="imageModal">
+        <div class="modal__content">
+          <span class="modal__close">&times;</span>
+          <img class="modal__image" id="modalImage" src="" alt="" />
+        </div>
+      </div>
       <!-- JOBS -->
 
       <!-- SERTIFICATE -->
@@ -638,7 +645,9 @@
         <div class="map__container container">
           <div class="map__header">
             <h2 class="map__title">Как нас найти</h2>
-            <p class="map__address">г. Санкт-Петербург, ул. Есенина, 12, корп. 1</p>
+            <p class="map__address">
+              г. Санкт-Петербург, ул. Есенина, 12, корп. 1
+            </p>
           </div>
 
           <div class="map__wrapper">
@@ -668,7 +677,9 @@
             <div class="map__info-item">
               <div class="map__info-icon">📍</div>
               <h3 class="map__info-title">Адрес</h3>
-              <p class="map__info-text">г. Санкт-Петербург, ул. Есенина, 12, корп. 1</p>
+              <p class="map__info-text">
+                г. Санкт-Петербург, ул. Есенина, 12, корп. 1
+              </p>
             </div>
 
             <div class="map__info-item">
@@ -884,6 +895,7 @@
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
     <script src="./script/main.js"></script>
+    <script src="./script/jobs.js"></script>
     <script src="./script/slide.js"></script>
     <!-- JS -->
   </body>
