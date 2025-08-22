@@ -1463,7 +1463,6 @@ h4,
     padding: 60px 0;
   }
   .jobs__list {
-    grid-template-columns: 1fr;
     gap: 12px;
     max-width: 500px;
     margin: 0 auto 30px;
