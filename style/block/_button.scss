@@ -1,46 +1,61 @@
 // BUTTON
 .button {
-	@include flex-center(true);
+    @include flex-center(true);
 
-	height: var(--button-height);
-	padding-inline: 35px;
-	font-size: 20px;
-	color: var(--color-light);
-	background-color: var(--color-accent);
-	border: var(--border);
-	border-radius: var(--border-radius-small);
-	border-color: var(--color-accent);
-	cursor: pointer;
+    height: var(--button-height);
+    padding-inline: 35px;
+    font-size: 20px;
+    color: var(--color-light);
+    // background: var(--color-accent);
+    background: linear-gradient(45deg, #a26efb 0%, #7E3FE0 50%, #532a94 100%);
+    border: var(--border);
+    border-radius: var(--border-radius-small);
+    border-color: linear-gradient(45deg, #a26efb 0%, #7E3FE0 50%, #532a94 100%);
+    cursor: pointer;
+    transition: all 0.5s ease;
 
-	@include hover {
-		// color: var(--color-light);
-		border-color: var(--color-accent-dark);
-		background-color: var(--color-accent-dark);
-	}
+    @include hover {
+        // background: var(--color-accent-dark);
+		background: linear-gradient(45deg, #532a94 0%, #7E3FE0 50%, #a26efb 100%);
+        border-color: linear-gradient(45deg, #532a94 0%, #7E3FE0 50%, #a26efb 100%);
+        // transform: translateY(-2px);
+    }
 
-	&--transparent {
-		color: var(--color-dark);
-		background-color: transparent;
-	}
+    &:active {
+        transform: translateY(0);
+        box-shadow: none;
+    }
 
-	&--accent {
-		color: var(--color-dark);
-		background-color: var(--color-accent);
+    &--transparent {
+        color: var(--color-dark);
+        background: transparent;
+        border-color: #7E3FE0;
+        
+        @include hover {
+            color: var(--color-light);
+            background: var(--color-accent-dark);
+            border-color: var(--color-accent-dark);
+        }
+    }
 
-		@include hover {
-			color: var(--color-accent);
-			background-color: var(--color-dark);
-		}
-	}
+    &--accent {
+        color: var(--color-light);
+        background: linear-gradient(45deg, #8D4AFF, #7E3FE0);
+        
+        @include hover {
+            color: var(--color-light);
+            background: var(--color-accent-dark);
+        }
+    }
 
-	@media (max-width: 768px) {
-		font-size: 1rem;
-		height: var(--button-height-small);
-	}
+    @media (max-width: 768px) {
+        font-size: 1rem;
+        height: var(--button-height-small);
+    }
 
-	@media (max-width: 480px) {
-		font-size: 1rem;
-	}
+    @media (max-width: 480px) {
+        font-size: 1rem;
+    }
 }
 // BUTTON
 
@@ -91,37 +106,51 @@
 
 // BUTTON-SMALL
 .button-small {
-	@include flex-center(true);
+    @include flex-center(true);
 
-	height: var(--button-height-small);
-	padding-inline: 35px;
-	font-size: 16px;
-	color: var(--color-light);
-	background-color: var(--color-accent);
-	border: var(--border);
-	border-radius: var(--border-radius-small);
-	border-color: var(--color-accent);
+    height: var(--button-height-small);
+    padding-inline: 35px;
+    font-size: 16px;
+    color: var(--color-light);
+    background: linear-gradient(45deg, #a26efb 0%, #7E3FE0 50%, #532a94 100%);
+    border: var(--border);
+    border-radius: var(--border-radius-small);
+    border-color: transparent;
+    transition: all 0.3s ease;
 
-	@include hover {
-		// color: var(--color-light);
-		background-color: var(--color-accent-dark);
-		border-color: var(--color-accent-dark);
-	}
+    @include hover {
+        
+		background: linear-gradient(45deg, #532a94 0%, #7E3FE0 50%, #a26efb 100%);
+        border-color: linear-gradient(45deg, #532a94 0%, #7E3FE0 50%, #a26efb 100%);
+        box-shadow: 0 3px 10px rgba(126, 63, 224, 0.3);
+    }
 
-	&--transparent {
-		color: var(--color-dark);
-		background-color: transparent;
-	}
+    &:active {
+        transform: translateY(0);
+        box-shadow: none;
+    }
 
-	&--accent {
-		color: var(--color-dark);
-		background-color: var(--color-accent);
+    &--transparent {
+        color: var(--color-dark);
+        // background: transparent;
+        border-color: #7E3FE0;
+        
+        @include hover {
+            color: var(--color-light);
+            background: var(--color-accent-dark);
+            border-color: var(--color-accent-dark);
+        }
+    }
 
-		@include hover {
-			color: var(--color-accent);
-			background-color: var(--color-dark);
-		}
-	}
+    &--accent {
+        color: var(--color-light);
+        background: linear-gradient(45deg, #8D4AFF, #7E3FE0);
+        
+        @include hover {
+            color: var(--color-light);
+            background: var(--color-accent-dark);
+        }
+    }
 }
 // BUTTON-SMALL
 

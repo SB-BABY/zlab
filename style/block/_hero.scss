@@ -47,12 +47,17 @@
         height: 100%;
         width: 100%;
         @include flex-center();
-        // justify-content: flex-end;
+        justify-content: flex-end;
+        
+            margin-bottom: 300px;
         // margin-bottom: 20rem;
         flex-direction: column;
         text-align: center;
         align-self: center;
         color: var(--color-light);
+        @include mobile{
+            justify-content: flex-end;
+        }
     }
     
     &__title {
